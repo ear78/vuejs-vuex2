@@ -1,6 +1,6 @@
 <template>
   <!-- dynamically building menu using single li component passing props from parent to child -->
-  <ul class="navigation">
+  <ul class="navigation-container">
     <NavItem v-bind:links="i" v-for="i in menu"></NavItem>
   </ul>
 </template>
@@ -26,6 +26,10 @@
             link: 'About'
           },
           {
+            path: 'info',
+            link: 'Info'
+          },
+          {
             path: '/contact',
             link: 'Contact'
           }
@@ -36,8 +40,14 @@
 </script>
 
 <style>
+  .router-link-active.active a,
+  .router-link-exact-active.active a {
+    color: lightgreen;
+  }
 
-  .active {
-    color: blue;
+  .navigation-container {
+    display: flex;
+    justify-content: center;
+    padding: 20px 0 50px;
   }
 </style>
