@@ -9,6 +9,9 @@
 <script>
     export default {
         name: 'Home',
+        components: {
+          
+        },
         data(){
           return {
             title: 'This is the home page...'
